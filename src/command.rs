@@ -58,7 +58,7 @@ impl ZeroShellCommands {
             "mv" => Ok(ZeroShellCommands::Mv(Mv::from_str(command))),
             "exit" => Ok(ZeroShellCommands::Exit),
             _ => {
-                println!("{}", format!("{}: command not found", command));
+                // println!("{}", format!("{}: command not found", command));
                 return Err(ZeroShellCommandsError::Unknown);
             }
         }
